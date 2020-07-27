@@ -3,3 +3,13 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/redis?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+mybatis-plus:
+  type-aliases-package: com.redis.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用
