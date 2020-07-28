@@ -1,8 +1,7 @@
 package com.redis.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.redis.entity.SysUser;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -15,6 +14,7 @@ public class UserController {
 
     @GetMapping("/admin")
     public String testAdmin() {
+        System.out.println("超管测试成功");
        return "超管测试成功";
     }
 
